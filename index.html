@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bandage: '#23856D',
+                        link: '#737373',
+                        blueLink: '#23A6F0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body class="font-sans">
+
+<header>
+    <div class="bg-bandage">
+        <div class="container max-w-[1080px] mx-auto pt-6 pb-[18px] text-white flex justify-between">
+            <div>
+                <span class="text-xs mr-[10px]">(225) 555 - 0118</span>
+                <span class="text-xs">michelle.rivera@example.com</span>
+            </div>
+            <div>
+                <span class="text-sm font-bold leading-6">Follow Us  and get a chance to win 80% off</span>
+            </div>
+            <div class="flex">
+                <span class="text-sm font-bold leading-6 mr-[10px]">Follow us:</span>
+                <ul class="flex items-center justify-between">
+                    <li class="w-[26px] h-[26px] flex items-center justify-center">
+                        <img src="assets/icons/insta.png" alt="">
+                    </li>
+                    <li class="w-[26px] h-[26px] flex items-center justify-center">
+                        <img src="assets/icons/youtube.png" alt="">
+                    </li>
+                    <li class="w-[26px] h-[26px] flex items-center justify-center">
+                        <img src="assets/icons/facebook.png" alt="">
+                    </li>
+                    <li class="w-[26px] h-[26px] flex items-center justify-center">
+                        <img src="assets/icons/twit.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container max-w-[1080px] mx-auto py-6">
+        <nav class="flex items-center justify-between">
+
+            <div class="text-2xl font-bold">Bandage</div>
+
+            <menu class="flex items-center justify-between gap-[15px]">
+                <li class="text-sm text-link font-bold leading-6">Home</li>
+                <li class="text-sm text-link font-bold leading-6">Shop</li>
+                <li class="text-sm text-link font-bold leading-6">About</li>
+                <li class="text-sm text-link font-bold leading-6">Blog</li>
+                <li class="text-sm text-link font-bold leading-6">Contact</li>
+                <li class="text-sm text-link font-bold leading-6">Pages</li>
+            </menu>
+
+            <div class="flex items-center justify-between">
+                <div class="text-blueLink text-sm font-bold leading-6 px-[15px]">
+                    Login / Register
+                </div>
+                <div class="flex text-blueLink">
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+              <span class="w-4 h-4 flex items-center justify-center text-xs">
+                <img src="assets/icons/magn.png" alt="">
+              </span>
+                    </button>
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+              <span class="w-4 h-4 flex items-center justify-center">
+                <img src="assets/icons/cart.png" alt="">
+              </span>
+                        1
+
+                    </button>
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+              <span class="w-4 h-4 flex items-center justify-center">
+                <img src="assets/icons/heart.png" alt="">
+              </span>
+                        1
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="container max-w-[1080px] mx-auto py-6 flex items-center justify-between">
+        <div class="flex">
+            <h2 class="text-2xl font-bold">Shop</h2>
+        </div>
+        <div class="flex">
+            <div class="text-sm font-bold leading-6">
+                Home
+                <span class="text-gray-300 mx-[15px]">></span>
+                <span class="text-gray-300"> Shop</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="container max-w-[1080px] mx-auto grid grid-cols-5 gap-[15px]">
+        <div class="flex relative">
+            <div class="flex flex-col items-center justify-center gap-[10px] text-white text-sm absolute inset-0">
+                <h4 class="uppercase font-bold leading-6">Cloths</h4>
+                <span class=""> 5 Items</span>
+            </div>
+            <img class="object-cover h-[223px] w-full max-w-[205px] mx-auto" src="assets/images/card-cover-5.jpg"
+                 alt="Cover">
+        </div>
+
+        <div class="flex relative">
+            <div class="flex flex-col items-center justify-center gap-[10px] text-white text-sm absolute inset-0">
+                <h4 class="uppercase font-bold leading-6">Cloths</h4>
+                <span class=""> 5 Items</span>
+            </div>
+            <img class="object-cover h-[223px] w-full max-w-[205px] mx-auto" src="assets/images/card-cover-6.jpg"
+                 alt="Cover">
+        </div>
+
+        <div class="flex relative">
+            <div class="flex flex-col items-center justify-center gap-[10px] text-white text-sm absolute inset-0">
+                <h4 class="uppercase font-bold leading-6">Cloths</h4>
+                <span class=""> 5 Items</span>
+            </div>
+            <img class="object-cover h-[223px] w-full max-w-[205px] mx-auto" src="assets/images/card-cover-7.jpg"
+                 alt="Cover">
+        </div>
+
+        <div class="flex relative">
+            <div class="flex flex-col items-center justify-center gap-[10px] text-white text-sm absolute inset-0">
+                <h4 class="uppercase font-bold leading-6">Cloths</h4>
+                <span class=""> 5 Items</span>
+            </div>
+            <img class="object-cover h-[223px] w-full max-w-[205px] mx-auto" src="assets/images/card-cover-8.jpg"
+                 alt="Cover">
+        </div>
+
+        <div class="flex relative">
+            <div class="flex flex-col items-center justify-center gap-[10px] text-white text-sm absolute inset-0">
+                <h4 class="uppercase font-bold leading-6">Cloths</h4>
+                <span class=""> 5 Items</span>
+            </div>
+            <img class="object-cover h-[223px] w-full max-w-[205px] mx-auto" src="assets/images/card-cover-9.jpg"
+                 alt="Cover">
+        </div>
+    </section>
+    <section class="container max-w-[1080px] mx-auto pt-16 pb-16 text-[#737373] flex justify-between">
+        <div class="flex items-center">
+            <span class="text-sm font-bold">Showing all 12 results</span>
+        </div>
+
+        <div class="flex items-center">
+            <span class="text-sm font-bold leading-6 mr-[10px]">Views:</span>
+            <ul class="flex items-center justify-between gap-8">
+                <li class="w-[26px] h-[26px] flex items-center justify-center ml-4">
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+              <span class="w-11 h-11 flex items-center justify-center">
+                <img src="assets/icons/btn-sm-24.svg" alt="">
+              </span>
+                    </button>
+                </li>
+                <li class="w-[26px] h-[26px] flex items-center justify-center">
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+              <span class="w-11 h-11 flex items-center justify-center">
+                <img src="assets/icons/btn-sm-24 (1).svg" alt="">
+              </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container flex max-w-[200px] justify-between">
+            <div x-data="{ isOpen: false }" class="relative">
+                <button type="button" @click="isOpen = !isOpen"
+                        class="inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-[#737373]  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                        id="menu-button" aria-expanded="true" aria-haspopup="true">
+                    Popularity
+                    <svg class="-mr-1 h-7 w-7 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div
+                        x-show="isOpen"
+                        x-transition:enter="transition ease-out duration-100 transform"
+                        x-transition:enter-start="opacity-0 scale-95"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75 transform"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-95"
+                        class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white"
+                        @click.away="isOpen = false">
+                    <div class="rounded-md bg-white shadow-xs">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button"
+                        class="inline-flex justify-center gap-x-1.5 rounded-md bg-sky-500/100 px-5 py-3 text-sm text-[#FFFFFF]  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-cyan-600"
+                        id="button" aria-expanded="true" aria-haspopup="true">
+                    Filter
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container items-center  max-w-[1080px] mx-auto grid grid-cols-4 gap-[15px]">
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5.jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker1"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker1" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker2"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker2" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker3"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker3" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker4"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker4" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (1).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker5"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker5" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker6"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker6" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker7"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker7" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker8"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker8" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (2).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker9"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker9" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker10"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker10" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker11"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker11" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker12"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker12" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/fixed-height.jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker13"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker13" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker14"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker14" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker15"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker15" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker16"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker16" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+    </section>
+    <section class="container items-center  max-w-[1080px] mx-auto grid grid-cols-4 gap-[15px] mt-12">
+        <div class="flex flex-col">
+            <figure class="leading-9">
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (3).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center mt-2">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker21"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker21" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker22"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker22" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker23"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker23" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker24"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker24" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (4).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker25"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker25" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker26"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker26" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker27"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker27" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker28"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker28" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/fixed-height (1).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker29"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker29" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker30"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker30" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker31"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker31" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker32"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker32" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/fixed-height (2).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker33"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker33" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker34"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker34" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker35"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker35" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker36"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker36" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+
+    </section>
+    <section class="container items-center  max-w-[1080px] mx-auto grid grid-cols-4 gap-[15px] mt-12">
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (5).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker41"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker41" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker42"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker42" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker43"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker43" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker44"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker44" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/fixed-height (3).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker45"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker45" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker46"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker46" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker47"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker47" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker48"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker48" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (6).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker49"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker49" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker50"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker50" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker51"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker51" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker52"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker52" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="flex flex-col">
+            <figure>
+                <img class="h-[300px] w-full max-w-[239px]" src="assets/images/product-cover-5 (7).jpg" alt="Cover">
+                <figcaption class="leading-9">
+                    <h4 class="flex justify-center font-semibold mt-2">Graphic Design</h4>
+                    <h6 class="flex justify-center text-[#737373]">English Department</h6>
+                    <div class="flex flew-row font-bold gap-1 justify-center">
+                        <h6 class="text-[#BDBDBD]"> $16.48</h6>
+                        <h6 class="text-[#23856D]"> $6.48</h6>
+                    </div>
+                    <div class="flex gap-1.5 justify-center mt-2">
+                        <label for="colorPicker53"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker53" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23A6F0"/>
+
+                        <label for="colorPicker54"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker54" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+
+                        <label for="colorPicker55"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker55" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#E77C40"/>
+
+                        <label for="colorPicker56"
+                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                        <input id="colorPicker56" type="color" class="w-4 h-4 p-0 rounded-full cursor-pointer"
+                               value="#23856D"/>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <section class="container flex items-center max-w-[1080px] mx-auto mt-16 justify-center">
+        <div>
+            <nav class="inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                <a href="#"
+                   class="relative h-16 w-20 inline-flex items-center justify-center rounded-l-md px-2 py-2 text-blue-400 ring-1 ring-inset ring-gray-300 hover:bg-blue-50 focus:z-20 focus:outline-offset-0">
+                    First
+                </a>
+                <a href="#"
+                   class="relative h-16 inline-flex items-center px-4 py-2 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-gray-300 hover:bg-blue-50 focus:z-20 focus:outline-offset-0">1</a>
+                <a href="#"
+                   class="relative h-16 inline-flex items-center px-4 py-2 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-gray-300 hover:bg-blue-50 focus:z-20 focus:outline-offset-0">2</a>
+                <a href="#"
+                   class="relative h-16 inline-flex items-center px-4 py-2 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-gray-300 hover:bg-blue-50 focus:z-20 focus:outline-offset-0">3</a>
+                <a href="#"
+                   class="relative h-16 w-20 inline-flex items-center justify-center rounded-r-md px-2 py-2 text-blue-400 ring-1 ring-inset ring-gray-300 hover:bg-blue-50 focus:z-20 focus:outline-offset-0">
+                    Next
+                </a>
+            </nav>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container items-center  max-w-[1080px] mx-auto mt-8 justify-center">
+        <img class="" src="assets/icons/container.svg" alt="foot-img">
+    </div>
+    <div class="container max-w-[1080px] mx-auto py-6">
+        <nav class="flex items-center justify-between">
+            <div class="text-2xl font-bold">Bandage</div>
+            <div class="flex items-center justify-between">
+                <div class="flex text-blueLink">
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+                        <img src="assets/icons/Vector.svg" alt="">
+                    </button>
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+                        <img src="assets/icons/ant-design_instagram-outlined.svg" alt="">
+                    </button>
+                    <button class="min-w-[46px] h-[46px] flex items-center justify-center text-xs">
+                        <img src="assets/icons/ant-design_twitter-outlined.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container items-center  max-w-[1080px] mx-auto mt-8 justify-center">
+        <img class="" src="assets/icons/hr.svg" alt="foot-img">
+    </div>
+    <div class="container flex max-w-[1080px] mx-auto mt-8 gap-20">
+        <div class="flex leading-9">
+            <ul class="flex flex-col">
+                <li class="flex font-bold">Company Info</li>
+                <li class="flex text-[#737373] font-bold ">
+                    <button>About Us</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Carrier</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>We are hiring</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Blog</button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex leading-9">
+            <ul class="flex flex-col">
+                <li class="flex font-bold">Legal</li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>About Us</button>
+                </li>
+                <li class="flex text-[#737373] font-bold ">
+                    <button>Carrier</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>We are hiring</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Blog</button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex leading-9">
+            <ul class="flex flex-col">
+                <li class="flex font-bold">Features</li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Business Marketing</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>User Analytic</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Live Chat</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Unlimited Support</button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex leading-9">
+            <ul class="flex flex-col">
+                <li class="flex font-bold">Resources</li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>IOS & Android</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Watch a Demo</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>Customers</button>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button>API</button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex leading-9">
+            <ul class="flex flex-col">
+                <li class="flex font-bold">
+                    Get In Touch
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <div>
+                        <label for="price" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                            <input type="text" name="price" id="price"
+                                   class="h-10 w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                   placeholder="Your Email">
+                            <div class="absolute inset-y-0 right-0 flex items-center">
+                                <button type="button"
+                                        class="inline-flex justify-start  gap-x-1.5 rounded-md bg-sky-500/100 px-5 py-3 text-sm text-[#FFFFFF]  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-cyan-600"
+                                        id="button1" aria-expanded="true" aria-haspopup="true">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex text-[#737373] font-bold">
+                    <button class="flex items-center text-xs font-normal">
+                        Lore imp sum dolor Amit
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container max-w-[1080px] mx-auto mt-16">
+        <p class="text-[#737373] font-bold text-sm">Made With Love By Finland All Right Reserved </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
